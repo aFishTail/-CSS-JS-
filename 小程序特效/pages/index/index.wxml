@@ -1,0 +1,5 @@
+<view class='pop-box {{unfold==0?"on":""}} {{unfold==1?"off":""}}'>
+  <view bindtap='unfold'>点我</view>
+  <view>222</view>
+  <view>333</view>
+</view>

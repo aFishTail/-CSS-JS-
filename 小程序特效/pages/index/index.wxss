@@ -1,0 +1,70 @@
+.pop-box {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1rpx solid pink;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+}
+
+.pop-box>view {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+}
+
+.pop-box>view:nth-child(1) {
+  background-color: rgb(243, 81, 17);
+}
+
+.pop-box>view:nth-child(2) {
+  background-color: rgb(192, 255, 245);
+}
+
+.pop-box>view:nth-child(3) {
+  background-color: rgb(128, 32, 218);
+}
+
+@keyframes unfold {
+  0% {
+    height: 120rpx;
+  }
+
+  80% {
+    height: 500rpx;
+  }
+
+  100% {
+    height: 420rpx;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    height: 420rpx;
+  }
+
+  20% {
+    height: 500rpx;
+  }
+
+  100% {
+    height: 420rpx;
+  }
+}
+.on {
+  height: 420rpx;
+  animation: unfold 1.2s 1 ease-out;
+}
+.off {
+  height: 120rpx;
+  animation: shrink 1.2s 1 ease-out;
+}
